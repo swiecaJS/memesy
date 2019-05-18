@@ -6,8 +6,10 @@ import BaseLink from "../ui/BaseLink";
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: ${props => props.theme.colors.primary};
-  padding: 10px 2em;
+  height: ${props => props.theme.sizes.headerHeight};
+  padding: 0 2em;
 `;
 
 const H1 = styled.h1`

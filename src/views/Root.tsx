@@ -10,7 +10,14 @@ import Header from "../components/Header";
 
 import "../shared/styles/index.scss";
 const theme = {
-  colors: { primary: "#1d4e89", textPrimary: "#ffffff" }
+  colors: {
+    primary: "#1d4e89",
+    primary20: "#1d4f8b33",
+    textPrimary: "#ffffff"
+  },
+  sizes: {
+    headerHeight: "60px"
+  }
 };
 
 const Root: React.FC = () => {
