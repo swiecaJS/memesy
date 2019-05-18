@@ -1,0 +1,13 @@
+@import "./z-index.scss";
+@import "./colors.scss";
+@import "./typography.scss";
+@import "./mixins.scss";
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

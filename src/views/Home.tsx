@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
-    <main className="container mx-auto text-center">
-      <div className="text-base pt-4">
-        <Link className="" to="/create">
+    <main>
+      <div>
+        <Link to="/create">
           Create memes
           <span role="img" aria-label="wrench">
             🛠
           </span>
         </Link>
-        <Link className="" to="/yours">
+        <Link to="/yours">
           Your memes ❤
           <span role="img" aria-label="heart">
             ❤️

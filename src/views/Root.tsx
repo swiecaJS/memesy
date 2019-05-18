@@ -1,32 +1,28 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+
 import Create from "./Create";
 import Home from "./Home";
 import Yours from "./Yours";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+
+import Header from "../components/Header";
+
+import "../shared/styles/index.scss";
+const theme = {
+  colors: { primary: "#1d4e89", textPrimary: "#ffffff" }
+};
 
 const Root: React.FC = () => {
   return (
-    <BrowserRouter>
-      <header className="bg-purple-darker m-6 p-6 rounded shadow-lg">
-        <h1 className="text-white text-3xl">Memesy</h1>
-      </header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/create">Create</Link>
-          </li>
-          <li>
-            <Link to="/yours">Your Memes</Link>
-          </li>
-        </ul>
-      </nav>
-      <Route path="/" component={Home} exact />
-      <Route path="/create" component={Create} />
-      <Route path="/yours" component={Yours} />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Header />
+        <Route path="/" component={Home} exact />
+        <Route path="/create" component={Create} />
+        <Route path="/yours" component={Yours} />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
